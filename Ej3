@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+  string sentence{"En un lugar de la Mancha, de cuyo nombre no quiero acordarme"};
+  string palabra{"Mancha"};
+  string str1=sentence.substr(0,sentence.find(palabra));
+  string str2=sentence.substr(sentence.find(palabra)+palabra.size(),sentence.size()-sentence.find(palabra));
+  cout<<str1;
+  cout<<endl;
+  cout<<str2;
+}
