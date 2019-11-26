@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+  string sentence{" "};
+  int position=0;
+  string pass{"password"};
+ cout<<"Introduce algo"<<endl;
+ getline(cin,sentence);
+ if(sentence.find(pass) !=-1){
+   position=sentence.find(pass);
+   cout<<position;
+ }else{
+   cout<<"no tiene password";
+ }
+ 
+}
