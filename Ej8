@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+std::string sentence{};
+std::string word{};
+int pos{ -1 };
+int main() {
+	std::cout << "Enter a sentence: ";
+	std::getline(std::cin, sentence);
+	for (auto i : sentence) {
+		pos++;
+		word.push_back(i);
+		if (i == ' ' || pos == sentence.length() - 1) {
+			if (word.at(0) == 'a') {
+				std::cout << word << " - ";
+				//word.erase();
+			}
+			 word.erase();
+		}
+		
+	}
+
+}
