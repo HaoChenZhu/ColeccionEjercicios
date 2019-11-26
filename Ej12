@@ -1,0 +1,23 @@
+#include <iostream>
+#include <array>
+
+using namespace std;
+
+int main() {
+  array<int,10> arr{7,7,7,7,1,1,7,1,7,7};
+  int cont{0};
+  int max{0};
+
+  for(auto elem:arr){
+    if(7 == elem){
+      cont++;
+    }else{
+      if(cont>max)max=cont;
+      cont = 0;
+    }
+  }
+  if (cont >max) max= cont;
+
+  cout <<"El maximo es "<<max;
+return 0;
+}
