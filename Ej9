@@ -1,0 +1,11 @@
+#include <iostream>
+#include <array>
+using namespace std;
+int main() {
+  int cont=0;
+  array<int,5>arraycito{1,2,7,7,5};
+  for(auto e:arraycito){
+    if(e==7) cont++;
+  }
+  cout<<cont;
+	}
