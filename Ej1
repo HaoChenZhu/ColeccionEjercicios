@@ -1,0 +1,34 @@
+#include <iostream>
+
+struct Coord {
+	int pX;
+	int pY;
+};
+struct Triangle {
+	Coord vert1;
+	Coord vert2;
+	Coord vert3;
+};
+struct Circle {
+	int radius;
+	Coord center;
+};
+struct Square{
+	Coord vert1;
+	Coord vert2;
+};
+struct Scene {
+	unsigned int width;
+	unsigned int height;
+	Triangle triangle1;
+	Circle circle1;
+	Square square1;
+};
+
+int main() {	
+	Triangle myTriangle{ {1,2},{0,1}, {2,3} };
+	Circle myCircle{ 7, {3,2}};
+	Square mySquare{ {2,2},{3,4} };
+	Scene myScene{400,200, myTriangle, myCircle, mySquare};
+	std::cout << myScene.circle1.center.pX<< std::endl;
+}
