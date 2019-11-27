@@ -1,0 +1,17 @@
+#include <iostream>
+int main()
+{
+    int number;
+    int cont=0;
+    int sum=0;
+
+    std::cout << "Introduce un numero: ";
+    std::cin >> number;
+    while(cont <= number){
+
+        sum=sum + cont;
+        cont++;
+    }
+    std:: cout << "El sumatorio es: " << sum << "\n";
+    return 0;
+}
