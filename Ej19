@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main(){
+
+    int number;
+    int cont=2;
+    bool prime= true;
+
+    std::cout << "Introduce un numero: ";
+    std::cin >> number;
+    if(number == 1) prime=false;
+    while(cont < number && prime==true){
+        if(number % cont ==0){
+            prime= false;
+        }
+        cont++;
+    }
+    if(prime==true){
+        std::cout << "The number is prime. \n";
+    }
+    else{
+        std::cout << "The prime number isn't prime.\n";
+    }
+    return 0;
+}
