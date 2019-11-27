@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string sentence{};
+string word{};
+int pos{ -1 };
+int main() {
+	cout << "Enter a sentence: ";
+	getline(std::cin, sentence);
+	for (auto i : sentence) {
+		pos++;
+		word.push_back(i);
+		if (i == ' ' || pos == sentence.length() - 1) {
+			if (word.find('a')!=-1) {
+				cout << word << " - ";
+			}
+			 word.erase();
+		}
+		
+	}
+}
